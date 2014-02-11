@@ -1,6 +1,6 @@
 <Response>
-  <Dial>
   	<Say voice="alice" language="en-US">Welcome to the Texas Exes San Francisco Bay Area Chapter conference line. Please hold.</Say>
+  <Dial>
     <Conference waitUrl="texasfight.mp3">Texas Exes Board</Conference>
   </Dial>
 </Response>
