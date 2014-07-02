@@ -31,12 +31,12 @@ function writeToLog() {
 	$fp = fopen('mylog.txt','a');
 
 	fwrite(
-		$fp, "CallSid: " . $CallSid . PHP_EOL . 
-		"Caller ID: " . $From . PHP_EOL . 
-		"From City: " . $FromCity . PHP_EOL . 
-		"From State: " . $FromState . PHP_EOL . 
-		"Duration: " . $CallDuration . PHP_EOL . " minutes" 
-		"-----" . PHP_EOL
+		$fp, 'CallSid: ' . $CallSid . PHP_EOL . 
+		'Caller ID: ' . $From . PHP_EOL . 
+		'From City: ' . $FromCity . PHP_EOL . 
+		'From State: ' . $FromState . PHP_EOL . 
+		'Duration: ' . $CallDuration . PHP_EOL . ' minutes' 
+		'-----' . PHP_EOL
 	);	
 
 	fclose($fp);
