@@ -46,4 +46,3 @@ function writeToLog() {
 writeToLog();
 
 ?>
-
