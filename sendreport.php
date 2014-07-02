@@ -5,13 +5,13 @@ require_once('./twilio-config.php');
 
 $client = new Services_Twilio($sid, $token);
 
-	$CallSid = $_POST['CallSid'];
-	$From = $_POST['From'];
-	$CallStatus = $_POST['CallStatus'];
-	$Direction = $_POST['Direction'];
-	$FromCity = $_POST['FromCity'];
-	$FromState = $_POST['FromState'];
-	$CallDuration = round($_POST['CallDuration']/60,2);
+global $CallSid = $_POST['CallSid'];
+global $From = $_POST['From'];
+global $CallStatus = $_POST['CallStatus'];
+global $Direction = $_POST['Direction'];
+global $FromCity = $_POST['FromCity'];
+global $FromState = $_POST['FromState'];
+global $CallDuration = round($_POST['CallDuration']/60,2);
 
 function getConference() {
 	
