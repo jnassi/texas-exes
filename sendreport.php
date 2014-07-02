@@ -34,13 +34,15 @@ function writeToLog() {
 		'Caller ID: ' . $From . PHP_EOL . 
 		'From City: ' . $FromCity . PHP_EOL . 
 		'From State: ' . $FromState . PHP_EOL . 
-		'Duration: ' . $CallDuration . PHP_EOL . ' minutes' .
+		'Duration: ' . $CallDuration . ' minutes' .
 		'-----' . PHP_EOL
 	);	
 
 	fclose($fp);
 		
 }
+
+callDetail();
 
 writeToLog();
 
