@@ -1,5 +1,14 @@
 <?php
 
+	$CallSid = $_POST['CallSid'];
+	$From = $_POST['From'];
+	$CallStatus = $_POST['CallStatus'];
+	$Direction = $_POST['Direction'];
+	$FromCity = $_POST['FromCity'];
+	$FromState = $_POST['FromState'];
+	$CallDuration = round($_POST['CallDuration']/60,2);
+
+
 require_once('../twilio/Services/Twilio.php');
 require_once('./twilio-config.php');
 
@@ -16,14 +25,6 @@ function getConference() {
 
 function writeToLog() {
 
-	$CallSid = $_POST['CallSid'];
-	$From = $_POST['From'];
-	$CallStatus = $_POST['CallStatus'];
-	$Direction = $_POST['Direction'];
-	$FromCity = $_POST['FromCity'];
-	$FromState = $_POST['FromState'];
-	$CallDuration = round($_POST['CallDuration']/60,2);
-
 	$fp = fopen('mylog.txt','a');
 
 	fwrite(
@@ -31,7 +32,7 @@ function writeToLog() {
 		'Caller ID: ' . $From . PHP_EOL . 
 		'From City: ' . $FromCity . PHP_EOL . 
 		'From State: ' . $FromState . PHP_EOL . 
-		'Duration: ' . $CallDuration . ' minutes' .
+		'Duration: ' . $CallDuration . ' minutes' . PHP_EOL .
 		'-----' . PHP_EOL
 	);	
 
