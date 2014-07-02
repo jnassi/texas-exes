@@ -35,7 +35,7 @@ function writeToLog() {
 		'Caller ID: ' . $From . PHP_EOL . 
 		'From City: ' . $FromCity . PHP_EOL . 
 		'From State: ' . $FromState . PHP_EOL . 
-		'Duration: ' . $CallDuration . PHP_EOL . ' minutes' 
+		'Duration: ' . $CallDuration . PHP_EOL . ' minutes' .
 		'-----' . PHP_EOL
 	);	
 
