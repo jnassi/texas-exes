@@ -13,7 +13,8 @@ function getConference() {
 	}
 }
 
-function callDetail() {
+
+function writeToLog() {
 
 	$CallSid = $_POST['CallSid'];
 	$From = $_POST['From'];
@@ -22,12 +23,6 @@ function callDetail() {
 	$FromCity = $_POST['FromCity'];
 	$FromState = $_POST['FromState'];
 	$CallDuration = round($_POST['CallDuration']/60,2);
-
-}
-
-function writeToLog() {
-
-	callDetail();
 
 	$fp = fopen('mylog.txt','a');
 
