@@ -5,13 +5,6 @@ require_once('./twilio-config.php');
 
 $client = new Services_Twilio($sid, $token);
 
-function getConference() {
-	
-	// Loop over the list of conferences and echo a property for each one
-	foreach ($client->account->conferences as $conference) {
-	    echo $conference->status;		
-	}
-}
 
 
 	$CallSid = $_POST['CallSid'];
@@ -21,9 +14,6 @@ function getConference() {
 	$FromCity = $_POST['FromCity'];
 	$FromState = $_POST['FromState'];
 	$CallDuration = round($_POST['CallDuration']/60,2);
-
-
-function writeToLog() {
 
 	$fp = fopen('mylog.txt','a');
 
@@ -38,8 +28,5 @@ function writeToLog() {
 
 	fclose($fp);
 		
-}
-
-writeToLog();
 
 ?>
