@@ -27,6 +27,8 @@ function callDetail() {
 
 function writeToLog() {
 
+	callDetail();
+
 	$fp = fopen('mylog.txt','a');
 
 	fwrite(
@@ -41,8 +43,6 @@ function writeToLog() {
 	fclose($fp);
 		
 }
-
-callDetail();
 
 writeToLog();
 
