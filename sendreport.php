@@ -7,12 +7,11 @@ $client = new Services_Twilio($sid, $token);
 
 function getConference() {
 	
-// Loop over the list of conferences and echo a property for each one
-foreach ($client->account->conferences as $conference) {
-    echo $conference->status;
-		
+	// Loop over the list of conferences and echo a property for each one
+	foreach ($client->account->conferences as $conference) {
+	    echo $conference->status;		
+	}
 }
-
 
 function callDetail() {
 
