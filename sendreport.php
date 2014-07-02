@@ -5,14 +5,6 @@ require_once('./twilio-config.php');
 
 $client = new Services_Twilio($sid, $token);
 
-global $CallSid;
-global $From;
-global $CallStatus;
-global $Direction;
-global $FromCity;
-global $FromState;
-global $CallDuration;
-
 function getConference() {
 	
 	// Loop over the list of conferences and echo a property for each one
@@ -22,6 +14,14 @@ function getConference() {
 }
 
 function callDetail() {
+
+	global $CallSid;
+	global $From;
+	global $CallStatus;
+	global $Direction;
+	global $FromCity;
+	global $FromState;
+	global $CallDuration;
 
 	$CallSid = $_POST['CallSid'];
 	$From = $_POST['From'];
