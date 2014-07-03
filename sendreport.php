@@ -1,7 +1,6 @@
 <?php
 
-$emailto = 'rick.valenzi@wellsfargoadvisors.com';
-//$emailto = 'jnassi@gmail.com';
+$emailto = 'ADD EMAIL ADDRESS HERE';
 
 	$CallSid = $_POST['CallSid'];
 	$From = $_POST['From'];
