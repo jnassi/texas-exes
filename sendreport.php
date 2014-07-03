@@ -28,8 +28,9 @@ $client = new Services_Twilio($sid, $token);
 
 	fclose($fp);
 		
-$message = 'Call Sid: ' . $CallSid . PHP_EOL . 'Caller ID: ' . $From . PHP_EOL . 'From City: ' . $FromCity . PHP_EOL . 'From State: ' . $FromState . PHP_EOL . 'Duration ' . $CallDuration . 'minutes';
+$message = 'Call Sid: ' . $CallSid . PHP_EOL . 'Caller ID: ' . $From . PHP_EOL . 'From City: ' . $FromCity . PHP_EOL . 'From State: ' . $FromState . PHP_EOL . 'Duration: ' . $CallDuration . ' minutes';
 
-mail('jnassi@gmail.com', 'Texas Exes Call Participant', $message);
+//mail('jnassi@gmail.com', 'Texas Exes Call Participant', $message);
+mail('rick.valenzi@wellsfargoadvisors.com', 'Texas Exes Call Participant', $message);
 
 ?>
