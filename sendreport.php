@@ -1,11 +1,7 @@
 <?php
 
-require_once('../twilio/Services/Twilio.php');
-require_once('./twilio-config.php');
-
-$client = new Services_Twilio($sid, $token);
-
-
+$emailto = 'rick.valenzi@wellsfargoadvisors.com';
+//$emailto = 'jnassi@gmail.com';
 
 	$CallSid = $_POST['CallSid'];
 	$From = $_POST['From'];
@@ -30,7 +26,6 @@ $client = new Services_Twilio($sid, $token);
 		
 $message = 'Call Sid: ' . $CallSid . PHP_EOL . 'Caller ID: ' . $From . PHP_EOL . 'From City: ' . $FromCity . PHP_EOL . 'From State: ' . $FromState . PHP_EOL . 'Duration: ' . $CallDuration . ' minutes';
 
-//mail('jnassi@gmail.com', 'Texas Exes Call Participant', $message);
-mail('rick.valenzi@wellsfargoadvisors.com', 'Texas Exes Call Participant', $message);
+mail($emailto, 'Texas Exes Call Participant', $message);
 
 ?>

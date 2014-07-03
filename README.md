@@ -8,3 +8,5 @@ To use this code, point a Twilio phone number to the conference.xml file. When y
 Once a second caller dials in, the hold music ends, and you will be joined into the conference.
 
 Every caller that joins will be accompanied by a beep. Similarly, every caller that drops out of the conference will be accompanied by a beep.
+
+After any caller hangs up, an email is sent to the organizer with the caller's details. Modify the $emailto variable at line 3 of sendreport.php.
